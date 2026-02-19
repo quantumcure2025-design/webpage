@@ -781,6 +781,9 @@
     .token-row { flex-wrap: wrap; gap: 6px; padding: 12px 12px; }
     .row-tokens { min-width: unset; font-size: 9px; }
 
+    /* CONNECT SOCIAL GRID */
+    section[style*="padding:80px 48px"] { padding: 60px 16px !important; }
+
     /* AIRDROP */
     [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
     [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
@@ -1014,17 +1017,21 @@
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
 
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
-        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">01</div>
-        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
-        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">FOLLOW SOCIALS</div>
-        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">Follow MadBull on Twitter, Telegram & other official social channels</div>
+        <a href="https://x.com/mad_bull9" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;">
+          <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;transition:background 0.2s;">01</div>
+          <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">FOLLOW ON X</div>
+          <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.88);line-height:1.7;text-align:justify;text-justify:inter-word;">Follow <span style="color:#4caf50;">@mad_bull9</span> on X (Twitter) to stay updated with all MadBull announcements</div>
+        </a>
       </div>
 
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
-        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">02</div>
-        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
-        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">JOIN TELEGRAM</div>
-        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">Join the MadBull community on Telegram to stay updated</div>
+        <a href="https://t.me/mad_bull9" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;">
+          <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">02</div>
+          <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">JOIN TELEGRAM</div>
+          <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.88);line-height:1.7;text-align:justify;text-justify:inter-word;">Join <span style="color:#4caf50;">@mad_bull9</span> on Telegram to connect with the MadBull community</div>
+        </a>
       </div>
 
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
@@ -1099,7 +1106,7 @@
     <div style="flex:1;min-width:240px;">
       <div style="font-family:'Bebas Neue',cursive;font-size:14px;font-weight:400;color:#4caf50;margin-bottom:16px;letter-spacing:2px;">HOW TO PARTICIPATE WHEN LIVE</div>
       <ol style="display:flex;flex-direction:column;gap:10px;padding-left:20px;">
-        <li style="font-size:16px;color:#ffffff;">Connect your wallet </li>
+        <li style="font-size:16px;color:#ffffff;">Connect your wallet</li>
         <li style="font-size:16px;color:#ffffff;">Choose your investment amount</li>
         <li style="font-size:16px;color:#ffffff;">Confirm transaction & receive MADBULL tokens</li>
         <li style="font-size:16px;color:#ffffff;">Tokens unlocked at DEX listing</li>
@@ -1465,6 +1472,63 @@
           <div class="row-tokens">1,000,000</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT SECTION -->
+<section style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:4px;color:#4caf50;margin-bottom:14px;">JOIN THE COMMUNITY</div>
+      <h2 style="font-family:'Bebas Neue',cursive;font-size:clamp(32px,5vw,52px);font-weight:400;color:#ffffff;letter-spacing:2px;margin:0 0 16px;">Stay Connected.<br><span style="color:#4caf50;">Stay Ahead.</span></h2>
+      <p style="font-family:'Inter',sans-serif;font-size:14.5px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto;line-height:1.9;text-align:center;">Follow MadBull on official channels for real-time updates on the presale, airdrop, platform launch, and ecosystem news.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:700px;margin:0 auto;">
+
+      <!-- X / TWITTER -->
+      <a href="https://x.com/mad_bull9" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;background:var(--dark3);border:1px solid var(--border);padding:36px 32px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;"
+        onmouseover="this.style.borderColor='rgba(255,255,255,0.35)';this.style.transform='translateY(-3px)'"
+        onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ffffff,transparent);"></div>
+        <div style="display:flex;align-items:center;gap:18px;margin-bottom:16px;">
+          <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Bebas Neue',cursive;font-size:18px;letter-spacing:2px;color:#ffffff;">X (TWITTER)</div>
+            <div style="font-family:'Inter',sans-serif;font-size:12px;color:#4caf50;letter-spacing:1px;">@mad_bull9</div>
+          </div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.8;margin:0 0 20px;">Real-time announcements, market updates, and platform milestones — follow us on X to never miss a thing.</p>
+        <div style="display:flex;align-items:center;gap:8px;font-family:'Bebas Neue',cursive;font-size:12px;letter-spacing:2px;color:#ffffff;">
+          FOLLOW NOW
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- TELEGRAM -->
+      <a href="https://t.me/mad_bull9" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;background:var(--dark3);border:1px solid var(--border);padding:36px 32px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;"
+        onmouseover="this.style.borderColor='rgba(76,175,80,0.45)';this.style.transform='translateY(-3px)'"
+        onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4caf50,transparent);"></div>
+        <div style="display:flex;align-items:center;gap:18px;margin-bottom:16px;">
+          <div style="width:48px;height:48px;background:rgba(76,175,80,0.08);border:1px solid rgba(76,175,80,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#4caf50"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.28 14.607l-2.95-.924c-.64-.203-.653-.64.136-.953l11.57-4.461c.537-.194 1.006.131.526 1.979z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Bebas Neue',cursive;font-size:18px;letter-spacing:2px;color:#ffffff;">TELEGRAM</div>
+            <div style="font-family:'Inter',sans-serif;font-size:12px;color:#4caf50;letter-spacing:1px;">@mad_bull9</div>
+          </div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.8;margin:0 0 20px;">Join our growing Telegram community for live discussions, airdrop alerts, and direct access to the MadBull team.</p>
+        <div style="display:flex;align-items:center;gap:8px;font-family:'Bebas Neue',cursive;font-size:12px;letter-spacing:2px;color:#4caf50;">
+          JOIN NOW
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>

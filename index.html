@@ -710,12 +710,141 @@
   .delay-4 { animation-delay: 0.4s; }
 
   @media (max-width: 800px) {
-    nav { padding: 16px 20px; }
+    nav { padding: 14px 16px; }
     .nav-links { display: none; }
-    .section { padding: 60px 20px; }
-    .tokenomics-inner { grid-template-columns: 1fr; gap: 40px; }
-    .airdrop-box { padding: 40px 20px; }
-    .hero-stats { gap: 24px; }
+    .section { padding: 48px 16px; }
+    .tokenomics-inner { grid-template-columns: 1fr; gap: 32px; }
+    .airdrop-box { padding: 32px 16px; }
+    .hero-stats { gap: 16px; }
+    .divider { margin: 0 16px; }
+    footer { padding: 32px 16px; }
+  }
+
+  /* ── TABLET ── */
+  @media (max-width: 900px) {
+    .utility-grid { grid-template-columns: 1fr 1fr; }
+    .presale-cards { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 600px) {
+
+    /* NAV */
+    nav { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+    .nav-logo { font-size: 15px; letter-spacing: 2px; }
+    .nav-links { display: none; }
+    nav .btn-primary { font-size: 10px; padding: 8px 16px; }
+
+    /* HERO */
+    .hero { padding: 100px 16px 60px; }
+    .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
+    .hero-glow, .hero-glow2 { width: 300px; height: 300px; }
+    .btn-group { flex-direction: column; align-items: center; gap: 12px; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; padding: 14px 20px; }
+    .presale-progress { padding: 24px 16px; margin: 32px 16px 0; }
+    .progress-info { flex-direction: column; gap: 16px; text-align: center; }
+
+    /* SECTIONS */
+    .section { padding: 48px 16px; }
+    .section-title { font-size: clamp(24px, 7vw, 36px); }
+
+    /* UTILITY */
+    .utility-grid { grid-template-columns: 1fr; gap: 2px; }
+    .utility-card { padding: 28px 20px; }
+
+    /* PRESALE CARDS */
+    .presale-cards { grid-template-columns: 1fr 1fr; gap: 2px; }
+    .pcard { padding: 20px 12px; }
+
+    /* AIRDROP */
+    .airdrop-box { padding: 32px 16px; }
+    .airdrop-steps { flex-direction: column; align-items: center; gap: 16px; }
+    .arrow-sep { transform: rotate(90deg); margin: 0; }
+    .step { max-width: 100%; min-width: unset; }
+
+    /* HOW TO PARTICIPATE */
+    .presale-progress + div,
+    [style*="display:flex;gap:40px"] { flex-direction: column !important; gap: 24px !important; }
+
+    /* TOKENOMICS */
+    .tokenomics-inner { grid-template-columns: 1fr; gap: 32px; }
+    .donut-wrap { width: 240px; height: 240px; margin: 0 auto; }
+    .token-rows { gap: 8px; }
+    .token-row { flex-wrap: wrap; gap: 6px; padding: 12px 12px; }
+    .row-tokens { min-width: unset; font-size: 9px; }
+
+    /* AIRDROP */
+    [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+    [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    [style*="grid-template-columns:1fr 1fr;gap:3px"] { display: flex !important; flex-direction: column !important; }
+    [style*="grid-template-columns:1fr auto 1fr auto 1fr"] { display: flex !important; flex-direction: column !important; gap: 16px !important; align-items: center !important; }
+    [style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+
+    /* REVENUE SHARING arrows */
+    [style*="font-size:28px;color:#4caf50"] { display: none !important; }
+
+    /* FOOTER */
+    footer { padding: 32px 16px; }
+    .disclaimer { font-size: 11px; padding: 16px; }
+
+    /* HERO TITLE */
+    h1[style*="Antonio"] { font-size: clamp(52px, 14vw, 80px) !important; }
+  }
+
+  /* ── EXTRA SMALL ── */
+  @media (max-width: 380px) {
+    .presale-cards { grid-template-columns: 1fr; }
+    .hero-tag { font-size: 9px; letter-spacing: 2px; padding: 5px 12px; }
+    [style*="grid-template-columns:repeat(2,1fr)"] { grid-template-columns: 1fr !important; }
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #4caf50;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0; right: 0;
+    background: rgba(6,10,15,0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    z-index: 99;
+    flex-direction: column;
+    gap: 0;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: #4caf50; }
+
+  @media (max-width: 800px) {
+    .hamburger { display: flex; }
   }
 </style>
 </head>
@@ -733,14 +862,29 @@
     <span style="color:#e03030;">MAD</span><span style="color:#4caf50;">BULL</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#presale">Presale</a></li>
     <li><a href="#airdrop">Airdrop</a></li>
+    <li><a href="#presale">Presale</a></li>
     <li><a href="#utility">Utility</a></li>
     <li><a href="#arbitrage">AI Arbitrage</a></li>
     <li><a href="#tokenomics">Tokenomics</a></li>
   </ul>
-  <a href="#presale" class="btn-primary" style="font-size:11px; padding:10px 24px;">BUY NOW</a>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="#presale" class="btn-primary" style="font-size:11px; padding:10px 24px;">BUY NOW</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#airdrop" onclick="toggleMenu()">Airdrop</a>
+  <a href="#presale" onclick="toggleMenu()">Presale</a>
+  <a href="#utility" onclick="toggleMenu()">Utility</a>
+  <a href="#arbitrage" onclick="toggleMenu()">AI Arbitrage</a>
+  <a href="#tokenomics" onclick="toggleMenu()">Tokenomics</a>
+  <a href="#presale" onclick="toggleMenu()" style="color:#4caf50;font-weight:700;">🐂 Buy Now</a>
+</div>
 
 <!-- HERO -->
 <header class="hero" id="home">
@@ -795,36 +939,130 @@
   </div>
 
   <div class="btn-group fade-in delay-3">
-    <a href="#presale" class="btn-primary">Join Presale</a>
     <a href="#airdrop" class="btn-secondary">Claim Airdrop</a>
+    <a href="#presale" class="btn-primary">Join Presale</a>
   </div>
 
   <div class="presale-progress fade-in delay-4">
-    <div class="progress-label">
-      <span>PRESALE PROGRESS</span>
-      <span>43% FILLED</span>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;color:#ffffff;">PRESALE STATUS</span>
+        <span style="font-family:'Bebas Neue',cursive;font-size:10px;letter-spacing:2px;padding:3px 10px;background:rgba(255,165,0,0.12);border:1px solid rgba(255,165,0,0.4);color:#ffa500;">⏳ NOT STARTED</span>
+      </div>
+      <span style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:2px;color:#ffffff;">0% FILLED</span>
     </div>
     <div class="progress-bar">
-      <div class="progress-fill"></div>
+      <div style="height:100%;width:0%;background:linear-gradient(90deg,var(--bull-blue),#4caf50);box-shadow:0 0 12px rgba(26,106,191,0.5);"></div>
+    </div>
+    <div style="margin:16px 0;padding:14px 18px;background:rgba(255,165,0,0.06);border:1px solid rgba(255,165,0,0.25);display:flex;align-items:center;gap:12px;">
+      <span style="font-size:20px;">🔔</span>
+      <div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:2px;color:#ffa500;margin-bottom:2px;">PRESALE OPENING SOON</div>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#ffffff;">The presale is launching soon. Follow our official channels to be the first notified when it goes live.</div>
+      </div>
     </div>
     <div class="progress-info">
       <div>
-        <span style="font-family:'Bebas Neue',cursive;font-size:11px;color:#ffffff;">CURRENT PRICE</span>
+        <span style="font-family:'Bebas Neue',cursive;font-size:11px;color:#ffffff;">PRESALE PRICE</span>
         <div class="price-tag">$0.04</div>
       </div>
       <div style="text-align:right;">
         <span style="font-family:'Bebas Neue',cursive;font-size:11px;color:#ffffff;">TOKENS AVAILABLE</span>
-        <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;font-weight:700;">70,000,000</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;font-weight:400;">70,000,000</div>
       </div>
     </div>
   </div>
 </header>
 
+<!-- AIRDROP SECTION -->
+<section class="section" id="airdrop">
+  <div class="section-label">01 — Airdrop</div>
+  <h2 class="section-title">Claim Your <span>Free Tokens</span></h2>
+  <p style="max-width:600px;color:#ffffff;font-size:17px;margin-bottom:48px;">1,000,000 MADBULL tokens (0.1% of total supply) are reserved for the community. Complete simple tasks and claim your share of the airdrop.</p>
+
+  <!-- TOP STATS ROW -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
+    <div style="background:var(--dark3);border:1px solid var(--border);padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4caf50,transparent);"></div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:36px;color:#4caf50;line-height:1;">1,000,000</div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;color:#ffffff;margin-top:6px;">TOTAL AIRDROP TOKENS</div>
+    </div>
+    <div style="background:var(--dark3);border:1px solid var(--border);padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bull-blue),transparent);"></div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:36px;color:var(--bull-blue);line-height:1;">0.1%</div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;color:#ffffff;margin-top:6px;">OF TOTAL SUPPLY</div>
+    </div>
+    <div style="background:var(--dark3);border:1px solid var(--border);padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4caf50,transparent);"></div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:36px;color:#4caf50;line-height:1;">FREE</div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;color:#ffffff;margin-top:6px;">NO PURCHASE REQUIRED</div>
+    </div>
+  </div>
+
+  <!-- HOW TO CLAIM -->
+  <div style="background:var(--dark3);border:1px solid var(--border);padding:40px;margin-bottom:2px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4caf50,var(--bull-blue),transparent);"></div>
+    <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:4px;color:#4caf50;margin-bottom:32px;">HOW TO CLAIM YOUR AIRDROP</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">01</div>
+        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">FOLLOW SOCIALS</div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">Follow MadBull on Twitter, Telegram & other official social channels</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">02</div>
+        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">JOIN TELEGRAM</div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">Join the MadBull community on Telegram to stay updated</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">03</div>
+        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">SUBMIT WALLET</div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">Submit your wallet address on the airdrop page to register your claim</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+        <div style="width:56px;height:56px;background:rgba(76,175,80,0.1);border:1px solid rgba(76,175,80,0.35);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:22px;color:#4caf50;flex-shrink:0;">04</div>
+        <div style="width:1px;height:20px;background:rgba(76,175,80,0.3);"></div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:15px;color:#ffffff;letter-spacing:1px;">RECEIVE TOKENS</div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;line-height:1.6;">MADBULL tokens will be distributed directly to your wallet</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA ROW -->
+  <div style="background:var(--dark3);border:1px solid var(--border);padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:#ffffff;letter-spacing:2px;margin-bottom:6px;">AIRDROP IS LIVE — CLAIM NOW</div>
+      <div style="font-family:'Inter',sans-serif;font-size:14px;color:#ffffff;">Limited supply · First come, first served · No purchase required</div>
+    </div>
+    <a href="https://airdrop-5eee.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:14px;padding:16px 40px;white-space:nowrap;">🐂 Claim Your Airdrop</a>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
 <!-- PRESALE SECTION -->
 <section class="section" id="presale">
-  <div class="section-label">01 — Presale</div>
-  <h2 class="section-title">Get Early Access<br><span>Before Listing</span></h2>
-  <p style="max-width:600px;color:#ffffff;font-size:18px;margin-bottom:8px;">Secure your MADBULL tokens at the lowest possible price before the public DEX listing. Early supporters gain the greatest advantage in the MadBull ecosystem.</p>
+  <div class="section-label">02 — Presale</div>
+  <h2 class="section-title">Presale <span>Opening Soon</span></h2>
+  <p style="max-width:600px;color:#ffffff;font-size:18px;margin-bottom:8px;">The MADBULL presale has not yet started. Register your interest now to receive priority whitelist access and be first to secure tokens at the launch price of <strong style="color:#4caf50;">$0.04</strong>.</p>
+
+  <!-- PRESALE NOT STARTED BANNER -->
+  <div style="margin-bottom:32px;padding:20px 28px;background:rgba(255,165,0,0.06);border:1px solid rgba(255,165,0,0.3);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <div style="width:12px;height:12px;border-radius:50%;background:#ffa500;box-shadow:0 0 10px rgba(255,165,0,0.7);flex-shrink:0;animation:pulse-border 2s infinite;"></div>
+    <div style="flex:1;min-width:200px;">
+      <div style="font-family:'Bebas Neue',cursive;font-size:15px;letter-spacing:3px;color:#ffa500;margin-bottom:4px;">PRESALE STATUS — NOT STARTED</div>
+      <div style="font-family:'Inter',sans-serif;font-size:13px;color:#ffffff;">The presale is coming soon. Stay tuned for the official launch announcement.</div>
+    </div>
+  </div>
 
   <div class="presale-cards">
     <div class="pcard">
@@ -851,60 +1089,22 @@
 
   <div style="margin-top:48px;background:var(--dark3);border:1px solid var(--border);padding:40px;display:flex;gap:40px;flex-wrap:wrap;align-items:center;">
     <div style="flex:1;min-width:240px;">
-      <div style="font-family:'Bebas Neue',cursive;font-size:14px;font-weight:400;color:var(--bull-blue);margin-bottom:16px;letter-spacing:2px;">HOW TO PARTICIPATE</div>
+      <div style="font-family:'Bebas Neue',cursive;font-size:14px;font-weight:400;color:#4caf50;margin-bottom:16px;letter-spacing:2px;">HOW TO PARTICIPATE WHEN LIVE</div>
       <ol style="display:flex;flex-direction:column;gap:10px;padding-left:20px;">
-        <li style="font-size:16px;color:var(--text);">Connect your wallet (MetaMask, WalletConnect)</li>
-        <li style="font-size:16px;color:var(--text);">Choose your investment amount</li>
-        <li style="font-size:16px;color:var(--text);">Confirm transaction & receive MADBULL tokens</li>
-        <li style="font-size:16px;color:var(--text);">Tokens unlocked at DEX listing</li>
+        <li style="font-size:16px;color:#ffffff;">Connect your wallet (MetaMask, WalletConnect)</li>
+        <li style="font-size:16px;color:#ffffff;">Choose your investment amount</li>
+        <li style="font-size:16px;color:#ffffff;">Confirm transaction & receive MADBULL tokens</li>
+        <li style="font-size:16px;color:#ffffff;">Tokens unlocked at DEX listing</li>
       </ol>
     </div>
     <div style="flex:1;min-width:240px;text-align:center;">
-      <a href="#" class="btn-primary" style="display:inline-block;margin-bottom:16px;">Connect Wallet</a>
-      <p style="font-family:'Inter',sans-serif;font-size:10px;color:#ffffff;letter-spacing:2px;">MINIMUM PURCHASE: $50</p>
+      <div style="padding:20px;background:rgba(255,165,0,0.06);border:1px solid rgba(255,165,0,0.25);margin-bottom:16px;">
+        <div style="font-family:'Bebas Neue',cursive;font-size:28px;color:#ffa500;letter-spacing:2px;">⏳ COMING SOON</div>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#ffffff;margin-top:6px;">Wallet connection will be enabled when the presale goes live</div>
+      </div>
+      <a href="#" class="btn-secondary" style="display:inline-block;margin-bottom:12px;width:100%;max-width:240px;">Notify Me When Live</a>
+      <p style="font-family:'Inter',sans-serif;font-size:10px;color:#ffffff;letter-spacing:2px;">MINIMUM PURCHASE: $1 · PRICE: $0.04</p>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- AIRDROP SECTION -->
-<section class="section" id="airdrop">
-  <div class="airdrop-box">
-    <div class="section-label" style="justify-content:center;">02 — Airdrop</div>
-    <h2 class="airdrop-title">FREE <span>TOKENS</span><br>FOR THE COMMUNITY</h2>
-    <p style="font-size:18px;color:#ffffff;max-width:560px;margin:0 auto;">1,000,000 MADBULL tokens (0.1% of total supply) are reserved for community airdrop participants. Complete simple tasks and earn your share.</p>
-
-    <div class="airdrop-steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-text">Follow official social channels</div>
-      </div>
-      <div class="arrow-sep">→</div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-text">Join Telegram community</div>
-      </div>
-      <div class="arrow-sep">→</div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-text">Submit your wallet address</div>
-      </div>
-      <div class="arrow-sep">→</div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-text">Receive MADBULL tokens</div>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin:32px 0;">
-      <div>
-        <span style="font-family:'Bebas Neue',cursive;font-size:36px;font-weight:400;color:var(--bull-green);">1,000,000</span>
-        <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:3px;color:#ffffff;text-transform:uppercase;">Total Airdrop Supply (0.1%)</p>
-      </div>
-    </div>
-
-    <a href="#" class="btn-secondary">Claim Your Airdrop</a>
   </div>
 </section>
 
@@ -1274,6 +1474,22 @@
 </footer>
 
 <script>
+  // HAMBURGER MENU
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('active');
+  }
+  // Close menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('hamburger');
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
   // Create floating particles
   const container = document.getElementById('particles');
   for (let i = 0; i < 30; i++) {

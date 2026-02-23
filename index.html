@@ -781,6 +781,11 @@
     .token-row { flex-wrap: wrap; gap: 6px; padding: 12px 12px; }
     .row-tokens { min-width: unset; font-size: 9px; }
 
+    /* ROADMAP - collapse alternating timeline to single column */
+    [style*="grid-template-columns:1fr 60px 1fr"] { display: flex !important; flex-direction: column !important; }
+    [style*="grid-template-columns:1fr 60px 1fr"] > div:empty { display: none !important; }
+    [style*="grid-template-columns:1fr 60px 1fr"] > div[style*="justify-content:center"] { display: none !important; }
+
     /* CONNECT SOCIAL GRID */
     section[style*="padding:80px 48px"] { padding: 60px 16px !important; }
 
@@ -878,6 +883,7 @@
     <li><a href="#utility">Utility</a></li>
     <li><a href="#arbitrage">AI Arbitrage</a></li>
     <li><a href="#tokenomics">Tokenomics</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#whitepaper">Whitepaper</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:12px;">
@@ -895,8 +901,9 @@
   <a href="#utility" onclick="toggleMenu()">Utility</a>
   <a href="#arbitrage" onclick="toggleMenu()">AI Arbitrage</a>
   <a href="#tokenomics" onclick="toggleMenu()">Tokenomics</a>
+  <a href="#roadmap" onclick="toggleMenu()">Roadmap</a>
   <a href="#whitepaper" onclick="toggleMenu()">Whitepaper</a>
-  <a href="#presale" onclick="toggleMenu()" style="color:#4caf50;font-weight:700;"> Buy Now</a>
+  <a href="#presale" onclick="toggleMenu()" style="color:#4caf50;font-weight:700;">🐂 Buy Now</a>
 </div>
 
 <!-- HERO -->
@@ -1555,6 +1562,129 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ROADMAP SECTION -->
+<div class="divider"></div>
+<section class="section" id="roadmap">
+  <div class="section-label">07 — Roadmap</div>
+  <h2 class="section-title">Building the<br><span>Future of MadBull</span></h2>
+  <p style="font-family:'Inter',sans-serif;font-size:14.5px;color:rgba(255,255,255,0.88);line-height:2;text-align:justify;text-justify:inter-word;word-spacing:1px;max-width:600px;margin-bottom:64px;">A structured, milestone-driven roadmap guiding MadBull from launch through full ecosystem maturity — spanning token distribution, platform development, AI arbitrage deployment, and global community expansion.</p>
+
+  <!-- TIMELINE -->
+  <div style="position:relative;">
+
+    <!-- Vertical line -->
+    <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(76,175,80,0.4) 10%,rgba(76,175,80,0.4) 90%,transparent);transform:translateX(-50%);"></div>
+
+    <!-- PHASE 1 — Q1 -->
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:start;margin-bottom:3px;">
+      <div style="background:var(--dark3);border:1px solid rgba(255,165,0,0.45);padding:36px 40px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ffa500,transparent);"></div>
+        <div style="margin-bottom:20px;">
+          <span style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;padding:4px 12px;background:rgba(255,165,0,0.12);border:1px solid rgba(255,165,0,0.4);color:#ffa500;">⚡ IN PROGRESS</span>
+        </div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:4px;color:#ffa500;margin-bottom:8px;">PHASE 01 — FOUNDATION</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:26px;color:#ffffff;letter-spacing:1px;margin-bottom:20px;">Q1 2026</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(76,175,80,0.15);border:1px solid #4caf50;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <svg width="10" height="10" viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#4caf50" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.7;">Smart contract development & security audit</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(255,165,0,0.1);border:1px solid rgba(255,165,0,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <div style="width:6px;height:6px;background:#ffa500;border-radius:50%;"></div>
+            </div>
+            <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.7;">Community airdrop & presale launch</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(255,165,0,0.1);border:1px solid rgba(255,165,0,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <div style="width:6px;height:6px;background:#ffa500;border-radius:50%;"></div>
+            </div>
+            <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.85);line-height:1.7;">Knowledge-based gaming platform beta release</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;padding-top:44px;">
+        <div style="width:16px;height:16px;background:#ffa500;border-radius:50%;box-shadow:0 0 16px rgba(255,165,0,0.6);position:relative;z-index:1;"></div>
+      </div>
+      <div></div>
+    </div>
+
+    <!-- PHASE 2 — Q2 -->
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:start;margin-bottom:3px;">
+      <div></div>
+      <div style="display:flex;justify-content:center;padding-top:44px;">
+        <div style="width:16px;height:16px;background:var(--dark3);border:2px solid rgba(26,95,168,0.6);border-radius:50%;position:relative;z-index:1;"></div>
+      </div>
+      <div style="background:var(--dark3);border:1px solid rgba(26,95,168,0.4);padding:36px 40px;position:relative;overflow:hidden;opacity:0.85;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bull-blue),transparent);"></div>
+        <div style="margin-bottom:20px;">
+          <span style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;padding:4px 12px;background:rgba(26,95,168,0.15);border:1px solid rgba(26,95,168,0.4);color:var(--bull-blue);">⏳ UPCOMING</span>
+        </div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:4px;color:var(--bull-blue);margin-bottom:8px;">PHASE 02 — ECOSYSTEM LAUNCH</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:26px;color:#ffffff;letter-spacing:1px;margin-bottom:20px;">Q2 2026</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(26,95,168,0.1);border:1px solid rgba(26,95,168,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <div style="width:6px;height:6px;background:var(--bull-blue);border-radius:50%;"></div>
+            </div>
+            <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.8);line-height:1.7;">DEX listing — liquidity pool seeded & staking platform live</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(26,95,168,0.1);border:1px solid rgba(26,95,168,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <div style="width:6px;height:6px;background:var(--bull-blue);border-radius:50%;"></div>
+            </div>
+            <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.8);line-height:1.7;">AI Arbitrage Trading Platform launch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3 — Q3 -->
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:start;">
+      <div style="background:var(--dark3);border:1px solid rgba(26,95,168,0.4);padding:36px 40px;position:relative;overflow:hidden;opacity:0.85;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bull-blue),transparent);"></div>
+        <div style="margin-bottom:20px;">
+          <span style="font-family:'Bebas Neue',cursive;font-size:11px;letter-spacing:3px;padding:4px 12px;background:rgba(26,95,168,0.15);border:1px solid rgba(26,95,168,0.4);color:var(--bull-blue);">◈ PLANNED</span>
+        </div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:13px;letter-spacing:4px;color:var(--bull-blue);margin-bottom:8px;">PHASE 03 — INFRASTRUCTURE</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:26px;color:#ffffff;letter-spacing:1px;margin-bottom:20px;">Q3 2026</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(26,95,168,0.1);border:1px solid rgba(26,95,168,0.35);flex-shrink:0;margin-top:2px;"></div>
+            <div>
+              <div style="font-family:'Bebas Neue',cursive;font-size:12px;letter-spacing:2px;color:var(--bull-blue);margin-bottom:3px;">Post-Quantum Secure Blockchain Network</div>
+              <span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.8);line-height:1.7;">Quantum-resistant cryptographic layer protecting MADBULL infrastructure against next-generation threats</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:18px;height:18px;background:rgba(26,95,168,0.1);border:1px solid rgba(26,95,168,0.35);flex-shrink:0;margin-top:2px;"></div>
+            <div>
+              <div style="font-family:'Bebas Neue',cursive;font-size:12px;letter-spacing:2px;color:var(--bull-blue);margin-bottom:3px;">Decentralised Database</div>
+              <span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.8);line-height:1.7;">Distributed, censorship-resistant data layer powering the MadBull ecosystem with full on-chain integrity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;padding-top:44px;">
+        <div style="width:16px;height:16px;background:var(--dark3);border:2px solid rgba(26,95,168,0.6);border-radius:50%;position:relative;z-index:1;"></div>
+      </div>
+      <div></div>
+    </div>
+
+  </div>
+
+  <!-- LEGEND -->
+  <div style="display:flex;gap:28px;margin-top:48px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;"><div style="width:14px;height:14px;background:#ffa500;border-radius:50%;box-shadow:0 0 8px rgba(255,165,0,0.5);"></div><span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">In Progress</span></div>
+    <div style="display:flex;align-items:center;gap:10px;"><div style="width:14px;height:14px;background:var(--bull-blue);border-radius:50%;"></div><span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Upcoming</span></div>
+    <div style="display:flex;align-items:center;gap:10px;"><svg width="10" height="10" viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#4caf50" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Completed milestone</span></div>
+    <div style="display:flex;align-items:center;gap:10px;"><div style="width:8px;height:8px;background:#ffa500;border-radius:50%;"></div><span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">In progress milestone</span></div>
+    <div style="display:flex;align-items:center;gap:10px;"><div style="width:8px;height:8px;background:var(--bull-blue);border-radius:50%;"></div><span style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,0.7);">Upcoming milestone</span></div>
   </div>
 </section>
 
